@@ -64,4 +64,6 @@ For REST API versioning, there are many debates around the internet, I personall
 Test Case
 ---------
 
-Demo application has a Integration test case.
+Demo application has a Integration test case. Test report is at -
+
+<pre><code>&lt;PROJECT_DIR>/build/reports/tests/classes/com.demo.exercise.it.DemoApplicationIntegrationTest.html</code></pre>
