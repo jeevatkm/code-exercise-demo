@@ -1,0 +1,38 @@
+/*
+ * Gradle build configuration
+ * 
+ * @author Jeevanandam M.
+ */
+
+buildscript {
+  ext { springBootVersion = '1.2.2.RELEASE' }
+  repositories { mavenCentral() }
+  dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'code-exercise-demo'
+  version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories { mavenCentral() }
+
+
+dependencies {
+  compile('org.springframework.boot:spring-boot-starter-data-mongodb',
+    'org.springframework.boot:spring-boot-starter-security',
+    'org.springframework.boot:spring-boot-starter-actuator',
+    'org.springframework.boot:spring-boot-starter-web')
+  
+  testCompile('org.springframework.boot:spring-boot-starter-test', 
+    'de.flapdoodle.embed:de.flapdoodle.embed.mongo:1.47.0',
+    'com.jayway.restassured:rest-assured:2.4.0')
+}
+
+task wrapper(type: Wrapper) { gradleVersion = '2.3' }
