@@ -15,6 +15,25 @@ HTTPS URI:
 git clone https://github.com/jeevatkm/code-exercise-demo.git
 </code></pre>
 
+Setup or Use Existing MongoDB
+-----------------------------
+
+Using existing one from your environment or Setup new one using below options.
+
+If you are using a Mac with homebrew:
+
+<pre><code>$ brew install mongodb</code></pre>
+
+With MacPorts:
+
+<pre><code>$ port install mongodb</code></pre>
+
+For other systems with package management, such as Redhat, Ubuntu, Debian, CentOS, and Windows, see [instructions here](http://docs.mongodb.org/manual/installation/).
+
+After you install MongoDB, launch it in a console window.
+
+<pre><code>$ mongod</code></pre>
+
 
 Configure MongoDB URI
 ---------------------
